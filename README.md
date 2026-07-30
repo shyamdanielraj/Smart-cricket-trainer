@@ -1,156 +1,126 @@
-# 🏏 Smart Cricket – AI-Powered Shot Analysis System
+# 🏏 Smart Cricket trainer
+<p align="center">
+  <img src="client/src/assets/hero.png" alt="Smart Cricket Banner" width="800">
+</p>
 
-Smart Cricket is an AI-powered web application that analyzes cricket shots in real-time using computer vision and machine learning. It provides instant feedback on shot type, stance, and batting form using pose detection and a trained ML model.
+<p align="center">
+  <strong>Analyze cricket shots in real time using Computer Vision, Machine Learning, and Artificial Intelligence.</strong>
+</p>
 
----
-
-## 🌐 Live Demo
-
-* 🔗 Frontend (Main App): https://smartcricket-seven.vercel.app
-* 🤖 ML Service (Health Check): https://project-exhibition-96-smart-cricket-ml.hf.space/health
-
----
-
-## 🔌 API Endpoints
-
-* Backend API Base:
-  https://smart-cricket-git-main-projectexhibition96s-projects.vercel.app
-
-* ML Prediction Endpoint:
-  https://project-exhibition-96-smart-cricket-ml.hf.space/predict_frame
+<p align="center">
+  <img src="https://img.shields.io/badge/React-Frontend-blue" />
+  <img src="https://img.shields.io/badge/Node.js-Backend-green" />
+  <img src="https://img.shields.io/badge/Flask-ML%20API-orange" />
+  <img src="https://img.shields.io/badge/MediaPipe-Pose%20Detection-red" />
+  <img src="https://img.shields.io/badge/License-MIT-purple" />
+</p>
 
 ---
 
-## 🚀 Features
+## 📌 Overview
 
-* 🎯 Real-time cricket shot classification
-* 🧍 Live pose detection with skeleton overlay (MediaPipe)
-* 📊 Batting form analysis (elbow, knee, stance)
-* 📈 Shot distribution analytics dashboard
-* 🎥 Webcam-based live analysis
-* 🧠 ML model integration (scikit-learn)
-* 🌐 Fully deployed cloud architecture
+Smart Cricket is an AI-powered cricket analytics platform designed to analyze batting techniques in real time. The system uses pose estimation, machine learning, and computer vision to classify cricket shots and provide instant feedback to players.
+
+The platform helps players improve their:
+
+* Batting posture
+* Elbow and knee alignment
+* Balance and stance
+* Shot execution
+* Overall performance
 
 ---
 
-## 🏗️ Architecture
+## ✨ Features
+
+* 🎯 Real-time cricket shot recognition
+* 🧠 Machine learning-based classification
+* 📷 Live webcam analysis
+* 🏏 Cover drive, pull shot, straight drive, and other shot detection
+* 📊 Analytics dashboard
+* 🔥 Pose tracking using MediaPipe
+* ☁️ Cloud deployment support
+* 📈 Performance monitoring and feedback
+
+---
+
+## 🏗️ System Architecture
 
 ```text
-Frontend (Vercel)
-        ↓
-Backend API (Vercel)
-        ↓
-ML Service (Hugging Face - Flask + MediaPipe)
+                 User Webcam
+                        │
+                        ▼
+             React Frontend (Vite)
+                        │
+                        ▼
+             Node.js Backend API
+                        │
+                        ▼
+        Flask + MediaPipe ML Service
+                        │
+                        ▼
+              Machine Learning Model
 ```
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```text
 smart-cricket/
 │
-├── client/            # React frontend (Vite)
-├── server/            # Node.js backend (Express API)
-├── python-service/    # Flask ML service
-├── uploads/           # Temporary storage
+├── client/                  # React frontend
+├── server/                  # Node.js backend
+├── python-service/          # Flask ML service
+├── uploads/                 # Uploaded files
+├── shot_model.pkl           # Trained model
+├── pose_data.csv            # Pose dataset
 └── README.md
 ```
 
 ---
 
-## ⚙️ Tech Stack
+## 🛠️ Technology Stack
 
 ### Frontend
 
-* React (Vite)
+* React
+* TypeScript
+* Vite
 * Tailwind CSS
 * Framer Motion
-* React Three Fiber (3D visualization)
 
 ### Backend
 
 * Node.js
 * Express.js
-* MongoDB Atlas
+* MongoDB
 * JWT Authentication
 
-### ML Service
+### Artificial Intelligence
 
+* Python
 * Flask
-* MediaPipe
 * OpenCV
-* scikit-learn
+* MediaPipe
+* NumPy
+* Scikit-learn
+* Pandas
 
 ---
 
-## 🧠 How It Works
+## 🚀 Installation
 
-1. User enables webcam from the frontend
-2. Frames are captured continuously
-3. Frames → sent to backend API
-4. Backend → forwards frames to ML service
-5. ML service:
-
-   * extracts pose landmarks (MediaPipe)
-   * runs trained ML model
-   * returns prediction + feedback
-6. Frontend displays:
-
-   * shot type
-   * confidence score
-   * stance classification
-   * form feedback
-   * live skeleton overlay
-
----
-
-## 🛠️ Local Setup
-
-### 1️⃣ Clone Repository
+### Clone the repository
 
 ```bash
-git clone https://github.com/projectexhibition96/Smart-Cricket
-cd Smart-Cricket
+git clone https://github.com/your-username/smart-cricket.git
+cd smart-cricket
 ```
 
 ---
 
-### 2️⃣ Start ML Service
-
-```bash
-cd python-service
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python app.py
-```
-
-Runs on:
-
-```
-http://localhost:5001
-```
-
----
-
-### 3️⃣ Start Backend
-
-```bash
-cd server
-npm install
-npm run dev
-```
-
-Runs on:
-
-```
-http://localhost:5050
-```
-
----
-
-### 4️⃣ Start Frontend
+### Install frontend dependencies
 
 ```bash
 cd client
@@ -158,68 +128,79 @@ npm install
 npm run dev
 ```
 
-Runs on:
-
-```
-http://localhost:5173
-```
-
 ---
 
-## 🔐 Environment Variables
+### Install backend dependencies
 
-⚠️ Never commit real secrets. Use placeholders.
-
-### Frontend
-
-```env
-VITE_API_BASE_URL=your_backend_url
+```bash
+cd server
+npm install
+npm start
 ```
 
 ---
 
-### Backend
+### Install Python dependencies
 
-```env
-PYTHON_SERVICE_URL=https://project-exhibition-96-smart-cricket-ml.hf.space
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+```bash
+cd python-service
+pip install -r requirements.txt
+python app.py
 ```
 
 ---
 
-## 📊 ML Model Details
+## 🌐 Deployment
 
-* Model: scikit-learn classifier
-* Input: 33 pose landmarks (MediaPipe)
-* Output:
-
-  * Shot type
-  * Confidence score
-  * Stance classification
-  * Form feedback
+| Service  | Platform            |
+| -------- | ------------------- |
+| Frontend | Vercel              |
+| Backend  | Vercel              |
+| ML API   | Hugging Face Spaces |
 
 ---
 
-## ⚠️ Notes
+## 📊 Workflow
 
-* Camera requires HTTPS (works on Vercel deployment)
-* ML service may take a few seconds on first request (cold start)
-* Root Hugging Face URL shows *Not Found* — this is expected (API-only service)
-* Backend URL will show `Cannot GET /` — it is an API, not a UI
-
----
-
-## 🚀 Future Improvements
-
-* Improve model accuracy
-* Add more shot types
-* Reduce real-time latency
-* Enhance mobile responsiveness
-* Add advanced coaching insights
+1. The user opens the application.
+2. The webcam captures live video.
+3. MediaPipe extracts body landmarks.
+4. The machine learning model predicts the shot.
+5. The system analyzes the player's posture.
+6. Feedback is displayed instantly.
 
 ---
 
-## 📌 License
+## 🔮 Future Enhancements
 
-This project is for educational and academic purposes.
+* Mobile application support
+* Bowling analysis
+* Player performance history
+* Personalized coaching suggestions
+* Advanced statistics dashboard
+* Multi-player tracking
+
+---
+
+## 👨‍💻 Contributors
+
+* Ramanadula Shyam Daniel Raj
+* Project Team Members
+
+---
+
+## ⭐ Support
+
+If you find this project useful, consider giving it a star on GitHub.
+
+```bash
+⭐ Star the repository
+🍴 Fork the project
+🛠️ Contribute to the codebase
+```
+
+---
+
+<p align="center">
+  Built with ❤️ using Artificial Intelligence, Computer Vision, and Machine Learning.
+</p>
