@@ -1,0 +1,59 @@
+{
+  "styles": [
+    {
+      "id": "cover-drive",
+      "label": "Cover Drive",
+      "file": "cover-drive.glb",
+      "predictionLabels": ["Cover Drive", "cover_drive"]
+    },
+    {
+      "id": "pull-shot",
+      "label": "Pull Shot",
+      "file": "pull-shot.glb",
+      "predictionLabels": ["Pull Shot", "pull_shot"]
+    },
+    {
+      "id": "straight-drive",
+      "label": "Straight Drive",
+      "file": "straight-drive.glb",
+      "predictionLabels": ["Straight Drive", "straight_drive"]
+    },
+    {
+      "id": "hook-shot",
+      "label": "Hook Shot",
+      "file": "hook-shot.glb",
+      "predictionLabels": ["Hook Shot", "hook_shot"]
+    },
+    {
+      "id": "helicopter-shot",
+      "label": "Helicopter Shot",
+      "file": "helicopter-shot.glb",
+      "predictionLabels": ["Helicopter Shot", "helicopter_shot"]
+    },
+    {
+      "id": "reverse-sweep",
+      "label": "Reverse Sweep",
+      "file": "reverse-sweep.glb",
+      "predictionLabels": ["Reverse Sweep", "reverse_sweep"]
+    },
+    {
+      "id": "sweep",
+      "label": "Sweep",
+      "file": "sweep.glb",
+      "predictionLabels": ["Sweep", "sweep_shot", "sweep"]
+    },
+    {
+      "id": "upper-cut",
+      "label": "Upper Cut",
+      "file": "upper-cut.glb",
+      "predictionLabels": ["Upper Cut", "upper_cut"]
+    },
+    {
+      "id": "default-style",
+      "label": "Default Stance",
+      "file": "default.glb",
+      "predictionLabels": ["Unknown", "Other"]
+    }
+  ]
+}
+

@@ -1,0 +1,12 @@
+{
+  "side_on_stance": {
+    "elbow_mean": 90,
+    "knee_mean": 160,
+    "tolerance": 15
+  },
+  "open_stance": {
+    "elbow_mean": 95,
+    "knee_mean": 155,
+    "tolerance": 15
+  }
+}

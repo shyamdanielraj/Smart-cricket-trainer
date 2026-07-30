@@ -1,0 +1,10 @@
+Flask==3.0.3
+flask-cors==4.0.1
+joblib==1.4.2
+pandas==2.2.2
+numpy==2.0.1
+scikit-learn==1.6.1
+python-dotenv==1.0.1
+mediapipe==0.10.14
+opencv-python-headless==4.10.0.84
+gunicorn

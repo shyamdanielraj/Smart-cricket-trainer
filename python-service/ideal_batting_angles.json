@@ -1,0 +1,52 @@
+{
+  "side_on_stance": {
+    "tolerance": 10,
+    "joints": {
+      "elbow": {
+        "mean": 120.9,
+        "tolerance": 10,
+        "weight": 0.4
+      },
+      "knee": {
+        "mean": 168.39,
+        "tolerance": 10,
+        "weight": 0.35
+      },
+      "shoulder": {
+        "mean": 40,
+        "tolerance": 12,
+        "weight": 0.15
+      },
+      "hip": {
+        "mean": 150,
+        "tolerance": 12,
+        "weight": 0.10
+      }
+    }
+  },
+  "open_stance": {
+    "tolerance": 10,
+    "joints": {
+      "elbow": {
+        "mean": 100.38,
+        "tolerance": 10,
+        "weight": 0.4
+      },
+      "knee": {
+        "mean": 144.35,
+        "tolerance": 10,
+        "weight": 0.35
+      },
+      "shoulder": {
+        "mean": 55,
+        "tolerance": 12,
+        "weight": 0.15
+      },
+      "hip": {
+        "mean": 140,
+        "tolerance": 12,
+        "weight": 0.10
+      }
+    }
+  }
+}
